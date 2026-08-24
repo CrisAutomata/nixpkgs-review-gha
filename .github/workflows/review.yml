@@ -107,6 +107,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           INPUTS: ${{ toJSON(github.event.inputs) }}
           HAS_GH_TOKEN: ${{ secrets.GH_TOKEN != '' && '1' || '0' }}
+          NIXPKGS_ALLOW_UNFREE: '1'
 
   review:
     needs: [prepare]
